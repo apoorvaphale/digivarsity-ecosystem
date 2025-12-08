@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Test - Digivarsity</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Test styles to see hamburger on desktop */
+        .test-info {
+            background: #fff3cd;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 2px solid #ffc107;
+        }
+        
+        /* Force hamburger to show for testing */
+        .hamburger.show-test {
+            display: flex !important;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-info">
+        <strong>Mobile Test Page</strong> - Resize browser to ≤768px to see hamburger menu, or click the button below to force show it.
+        <br>
+        <button onclick="document.getElementById('hamburger').classList.toggle('show-test')" style="margin-top: 0.5rem; padding: 0.5rem 1rem; cursor: pointer;">
+            Toggle Hamburger Visibility
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="Digivarsity Logo" class="logo-img" onerror="this.src='logo.png'">
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="programs.html">Programs</a>
+                <a href="/career-tools">Career Tools</a>
+                <a href="/partners">Partners</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div style="padding: 2rem; max-width: 800px; margin: 0 auto;">
+        <h1>Mobile Navigation Test</h1>
+        
+        <h2>Instructions:</h2>
+        <ol>
+            <li><strong>Desktop View:</strong> You should see horizontal navigation links (no hamburger)</li>
+            <li><strong>Mobile View (≤768px):</strong> You should see the hamburger menu (3 horizontal lines)</li>
+            <li><strong>Click hamburger:</strong> Side menu should slide in from the right</li>
+            <li><strong>Click link or outside:</strong> Menu should close</li>
+        </ol>
+
+        <h2>Current Viewport Width:</h2>
+        <p id="viewport-width" style="font-size: 2rem; font-weight: bold; color: #0057B7;"></p>
+
+        <h2>Hamburger Status:</h2>
+        <p id="hamburger-status" style="font-size: 1.5rem;"></p>
+
+        <h2>Logo Status:</h2>
+        <p id="logo-status" style="font-size: 1.5rem;"></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Display viewport width
+        function updateViewportWidth() {
+            const width = window.innerWidth;
+            document.getElementById('viewport-width').textContent = width + 'px';
+            
+            const hamburgerStatus = document.getElementById('hamburger-status');
+            if (width <= 768) {
+                hamburgerStatus.textContent = '✅ Hamburger should be visible';
+                hamburgerStatus.style.color = 'green';
+            } else {
+                hamburgerStatus.textContent = '❌ Hamburger should be hidden (desktop view)';
+                hamburgerStatus.style.color = 'orange';
+            }
+        }
+
+        // Check logo
+        const logoImg = document.querySelector('.logo-img');
+        const logoStatus = document.getElementById('logo-status');
+        
+        logoImg.addEventListener('load', () => {
+            logoStatus.textContent = '✅ Logo loaded successfully';
+            logoStatus.style.color = 'green';
+        });
+        
+        logoImg.addEventListener('error', () => {
+            logoStatus.textContent = '⚠️ Logo failed to load (trying fallback)';
+            logoStatus.style.color = 'orange';
+        });
+
+        updateViewportWidth();
+        window.addEventListener('resize', updateViewportWidth);
+    </script>
+</body>
+</html>

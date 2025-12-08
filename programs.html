@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs — Digivarsity 3.0</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="programs.css">
+</head>
+<body>
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="Digivarsity Logo" class="logo-img" onerror="this.src='logo.png'">
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="programs.html">Programs</a>
+                <a href="/career-tools">Career Tools</a>
+                <a href="/partners">Partners</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="header-content">
+            <h1>Find the Program That Fits You.</h1>
+        </div>
+    </header>
+
+    <section class="programs-section">
+        <div class="programs-container">
+            <!-- Filter Panel -->
+            <aside class="filter-panel">
+                <h3>Filter Programs</h3>
+                
+                <div class="filter-group">
+                    <label>Mode</label>
+                    <select id="filter-mode">
+                        <option value="">All Modes</option>
+                        <option value="online">Online</option>
+                        <option value="work-linked">Work-Linked</option>
+                        <option value="executive">Executive</option>
+                        <option value="hybrid">Hybrid</option>
+                        <option value="short-term">Short-Term</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Eligibility</label>
+                    <select id="filter-eligibility">
+                        <option value="">All Levels</option>
+                        <option value="12th">12th Pass</option>
+                        <option value="graduate">Graduate</option>
+                        <option value="postgraduate">Postgraduate</option>
+                        <option value="working">Working Professional</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Duration</label>
+                    <select id="filter-duration">
+                        <option value="">Any Duration</option>
+                        <option value="short">3-6 Months</option>
+                        <option value="medium">1-2 Years</option>
+                        <option value="long">3-4 Years</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Budget</label>
+                    <select id="filter-budget">
+                        <option value="">Any Budget</option>
+                        <option value="low">Under ₹50,000</option>
+                        <option value="medium">₹50,000 - ₹2,00,000</option>
+                        <option value="high">Above ₹2,00,000</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>University</label>
+                    <select id="filter-university">
+                        <option value="">All Universities</option>
+                        <option value="amity">Amity University</option>
+                        <option value="manipal">Manipal University</option>
+                        <option value="jain">Jain University</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-primary" id="apply-filters">Apply Filters</button>
+            </aside>
+
+            <!-- Program Grid -->
+            <div class="programs-grid">
+                <!-- Program Tile 1 -->
+                <a href="course-detail.html" class="program-tile">
+                    <div class="program-badge">Work-Linked</div>
+                    <h3>BBA with Internship</h3>
+                    <p class="program-university">Amity University Online</p>
+                    <div class="program-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Mode:</span>
+                            <span class="detail-value">Work-Linked</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">EMI:</span>
+                            <span class="detail-value">₹4,999/month</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Internship:</span>
+                            <span class="detail-value">✓ Included</span>
+                        </div>
+                    </div>
+                    <div class="program-footer">
+                        <span class="hiring-badge">2500+ Hiring Partners</span>
+                    </div>
+                </a>
+
+                <!-- Program Tile 2 -->
+                <a href="course-detail.html" class="program-tile">
+                    <div class="program-badge badge-online">Online</div>
+                    <h3>MBA (Online)</h3>
+                    <p class="program-university">Manipal University</p>
+                    <div class="program-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Mode:</span>
+                            <span class="detail-value">Online</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">EMI:</span>
+                            <span class="detail-value">₹8,999/month</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Duration:</span>
+                            <span class="detail-value">2 Years</span>
+                        </div>
+                    </div>
+                    <div class="program-footer">
+                        <span class="hiring-badge">Hiring Partners Available</span>
+                    </div>
+                </a>
+
+                <!-- Program Tile 3 -->
+                <a href="course-detail.html" class="program-tile">
+                    <div class="program-badge badge-executive">Executive</div>
+                    <h3>Executive MBA</h3>
+                    <p class="program-university">Jain University</p>
+                    <div class="program-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Mode:</span>
+                            <span class="detail-value">Executive</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">EMI:</span>
+                            <span class="detail-value">₹12,999/month</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Duration:</span>
+                            <span class="detail-value">18 Months</span>
+                        </div>
+                    </div>
+                    <div class="program-footer">
+                        <span class="hiring-badge">Career Acceleration</span>
+                    </div>
+                </a>
+
+                <!-- Program Tile 4 -->
+                <a href="course-detail.html" class="program-tile">
+                    <div class="program-badge">Work-Linked</div>
+                    <h3>BCA with Internship</h3>
+                    <p class="program-university">Amity University Online</p>
+                    <div class="program-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Mode:</span>
+                            <span class="detail-value">Work-Linked</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">EMI:</span>
+                            <span class="detail-value">₹4,499/month</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Internship:</span>
+                            <span class="detail-value">✓ Included</span>
+                        </div>
+                    </div>
+                    <div class="program-footer">
+                        <span class="hiring-badge">2500+ Hiring Partners</span>
+                    </div>
+                </a>
+
+                <!-- Program Tile 5 -->
+                <a href="course-detail.html" class="program-tile">
+                    <div class="program-badge badge-short">Short-Term</div>
+                    <h3>Data Science Bootcamp</h3>
+                    <p class="program-university">Industry Partner Program</p>
+                    <div class="program-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Mode:</span>
+                            <span class="detail-value">Short-Term</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">EMI:</span>
+                            <span class="detail-value">₹6,999/month</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Duration:</span>
+                            <span class="detail-value">6 Months</span>
+                        </div>
+                    </div>
+                    <div class="program-footer">
+                        <span class="hiring-badge">Job-Oriented Training</span>
+                    </div>
+                </a>
+
+                <!-- Program Tile 6 -->
+                <a href="course-detail.html" class="program-tile">
+                    <div class="program-badge badge-hybrid">Hybrid</div>
+                    <h3>B.Com (Hybrid)</h3>
+                    <p class="program-university">Jain University</p>
+                    <div class="program-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Mode:</span>
+                            <span class="detail-value">Hybrid</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">EMI:</span>
+                            <span class="detail-value">₹5,499/month</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Duration:</span>
+                            <span class="detail-value">3 Years</span>
+                        </div>
+                    </div>
+                    <div class="program-footer">
+                        <span class="hiring-badge">Campus + Online</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <nav class="footer-nav">
+                <a href="/programs">Programs</a>
+                <a href="/career-tools">Career Tools</a>
+                <a href="/partners/employers">Employers</a>
+                <a href="/partners/universities">Universities</a>
+                <a href="/partners/csr">CSR</a>
+                <a href="/contact">Contact</a>
+            </nav>
+            <div class="social-icons">
+                <a href="#" class="social-icon">LinkedIn</a>
+                <a href="#" class="social-icon">Twitter</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+            <p class="footer-tagline">A TeamLease EdTech Platform</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="programs.js"></script>
+</body>
+</html>

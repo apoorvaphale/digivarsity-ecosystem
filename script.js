@@ -1,0 +1,119 @@
+// Hamburger Menu Toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    const menuOverlay = document.getElementById('menuOverlay');
+    
+    function closeMenu() {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    function openMenu() {
+        hamburger.classList.add('active');
+        navLinks.classList.add('active');
+        menuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    if (hamburger && navLinks && menuOverlay) {
+        // Toggle menu on hamburger click
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (navLinks.classList.contains('active')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+        
+        // Close menu when clicking on a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                closeMenu();
+            });
+        });
+        
+        // Close menu when clicking overlay
+        menuOverlay.addEventListener('click', () => {
+            closeMenu();
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                closeMenu();
+            }
+        });
+        
+        // Close menu on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+    }
+    
+    // Observe counters
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => observer.observe(counter));
+});
+
+// Animated Counter
+function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-target'));
+    const duration = 1500;
+    const increment = target / (duration / 16);
+    let current = 0;
+
+    const updateCounter = () => {
+        current += increment;
+        if (current < target) {
+            element.textContent = Math.floor(current).toLocaleString();
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.textContent = target.toLocaleString();
+        }
+    };
+
+    updateCounter();
+}
+
+// Intersection Observer for animations
+const observerOptions = {
+    threshold: 0.2,
+    rootMargin: '0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Trigger counter animation
+            if (entry.target.classList.contains('counter')) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        }
+    });
+}, observerOptions);
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Chatbot trigger
+document.querySelector('.chatbot-trigger')?.addEventListener('click', () => {
+    alert('AI Chatbot "Ask Divya" - Integration pending');
+});

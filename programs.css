@@ -1,0 +1,237 @@
+.page-header {
+    background: linear-gradient(135deg, var(--blue), var(--green));
+    color: var(--light);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.programs-section {
+    padding: 4rem 2rem;
+    background: var(--gray);
+}
+
+.programs-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3rem;
+}
+
+/* Filter Panel */
+.filter-panel {
+    background: var(--light);
+    padding: 2rem;
+    border-radius: 12px;
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.filter-panel h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--blue);
+}
+
+.filter-group {
+    margin-bottom: 1.5rem;
+}
+
+.filter-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: var(--light);
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: var(--blue);
+}
+
+#apply-filters {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Programs Grid */
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.program-tile {
+    background: var(--light);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    display: block;
+}
+
+.program-tile:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.program-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--red);
+    color: var(--light);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.badge-online {
+    background: var(--blue);
+}
+
+.badge-executive {
+    background: var(--green);
+}
+
+.badge-short {
+    background: #FF6B35;
+}
+
+.badge-hybrid {
+    background: #6C5CE7;
+}
+
+.program-tile h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+    padding-right: 6rem;
+}
+
+.program-university {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.program-details {
+    border-top: 2px solid var(--gray);
+    border-bottom: 2px solid var(--gray);
+    padding: 1.5rem 0;
+    margin-bottom: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #666;
+}
+
+.detail-value {
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.program-footer {
+    text-align: center;
+}
+
+.hiring-badge {
+    display: inline-block;
+    background: var(--gray);
+    color: var(--blue);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .programs-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .filter-panel {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 3rem 1.5rem;
+    }
+    
+    .programs-section {
+        padding: 2rem 1.5rem;
+    }
+    
+    .programs-container {
+        gap: 2rem;
+    }
+    
+    .filter-panel {
+        padding: 1.5rem;
+    }
+    
+    .filter-panel h3 {
+        font-size: 1.3rem;
+    }
+    
+    .programs-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .program-tile {
+        padding: 1.5rem;
+    }
+    
+    .program-tile h3 {
+        font-size: 1.3rem;
+        padding-right: 5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .program-badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .detail-item {
+        font-size: 0.9rem;
+    }
+}
