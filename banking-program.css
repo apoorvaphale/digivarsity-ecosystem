@@ -11,8 +11,8 @@
 .bp-hero {
     position: relative;
     color: var(--light);
-    padding: 3rem 2rem;
-    min-height: 400px;
+    padding: 2rem 2rem;
+    min-height: 280px;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -80,18 +80,67 @@
 }
 
 .bp-hero-content h1 {
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-    margin-bottom: 0.75rem;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    margin-bottom: 0.5rem;
     line-height: 1.2;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     font-weight: 700;
 }
 
 .bp-tagline {
-    font-size: 1.1rem;
+    font-size: 1rem;
     opacity: 0.95;
     text-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-    line-height: 1.5;
+    line-height: 1.4;
+}
+
+/* Bank Logo in Header - Aesthetic Placement Above Title */
+.bank-logo-hero {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--light);
+    box-shadow: 
+        0 10px 35px rgba(0, 0, 0, 0.3),
+        0 5px 15px rgba(0, 0, 0, 0.2),
+        inset 0 2px 0 rgba(255, 255, 255, 0.25);
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0 auto 1.25rem;
+    position: relative;
+}
+
+.bank-logo-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+}
+
+.bank-logo-hero:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 
+        0 15px 45px rgba(0, 0, 0, 0.35),
+        0 8px 20px rgba(0, 0, 0, 0.25),
+        inset 0 2px 0 rgba(255, 255, 255, 0.35);
+}
+
+.bank-logo-hero.acme-logo {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+}
+
+.bank-logo-hero.pf-logo {
+    background: linear-gradient(135deg, #065f46 0%, #10b981 100%);
 }
 
 /* Lead Form - Enhanced */
@@ -153,33 +202,63 @@
     box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
 }
 
-/* 2. Highlights Section - Compact */
+/* 2. Highlights Section - Colored Blocks */
 .bp-highlights {
-    padding: 2rem 1.5rem;
-    background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
+    padding: 2.5rem 1.5rem;
+    background: linear-gradient(180deg, #f8f9fa 0%, #fff 100%);
+    position: relative;
 }
 
 .highlights-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
 .highlight-card {
-    background: linear-gradient(145deg, #ffffff 0%, #f8f8f8 100%);
-    border: 1px solid #eee;
-    border-radius: 10px;
-    padding: 1.25rem 1rem;
+    border-radius: 12px;
+    padding: 1.75rem 1.25rem;
     text-align: center;
     transition: all 0.3s ease;
-    border-left: 3px solid var(--orange);
+    color: var(--light);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.highlight-earn {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.highlight-professional {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.highlight-placement {
+    background: linear-gradient(135deg, var(--orange) 0%, #ea580c 100%);
 }
 
 .highlight-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.12);
-    border-color: rgba(255, 107, 53, 0.3);
-    border-left-color: var(--orange);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.highlight-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    display: block;
+    opacity: 0.95;
 }
 
 .highlight-content {
@@ -187,16 +266,18 @@
 }
 
 .highlight-card h3 {
-    font-size: 0.95rem;
-    color: var(--dark);
-    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    color: var(--light);
+    margin-bottom: 0.5rem;
     line-height: 1.3;
+    font-weight: 700;
 }
 
 .highlight-card p {
-    color: #666;
-    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.85rem;
     margin: 0;
+    line-height: 1.4;
 }
 
 /* 3. Key Information Section */
@@ -235,6 +316,13 @@
 .info-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.info-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
 }
 
 .info-card h4 {
@@ -295,10 +383,9 @@
 }
 
 .eligibility-icon {
-    color: var(--orange);
-    font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.25rem;
     flex-shrink: 0;
+    opacity: 0.85;
 }
 
 /* 5. Admission Process - Compact */
@@ -578,13 +665,20 @@
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .bp-hero {
-        padding: 2.5rem 2rem;
-        min-height: 350px;
+        padding: 2rem 2rem;
+        min-height: 280px;
+    }
+
+    .bank-logo-hero {
+        width: 72px;
+        height: 72px;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
     }
 
     .bp-hero-container {
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     .bp-hero-content {
@@ -609,16 +703,23 @@
 
 @media (max-width: 768px) {
     .bp-hero {
-        padding: 2rem 1.5rem;
-        min-height: 320px;
+        padding: 1.75rem 1.5rem;
+        min-height: 260px;
+    }
+
+    .bank-logo-hero {
+        width: 64px;
+        height: 64px;
+        font-size: 1.2rem;
+        margin-bottom: 0.875rem;
     }
 
     .bp-hero-content h1 {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
     }
 
     .bp-tagline {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .lead-form-card {
@@ -651,17 +752,25 @@
 
     .highlights-grid {
         grid-template-columns: 1fr;
-        gap: 0.75rem;
+        gap: 1rem;
     }
 
     .highlight-card {
-        padding: 1rem;
+        padding: 1.5rem 1.25rem;
         text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .highlight-icon {
+        font-size: 1.75rem;
+        margin-bottom: 0;
     }
 
     .highlight-card h3 {
-        font-size: 0.9rem;
-        margin-bottom: 0.15rem;
+        font-size: 0.95rem;
+        margin-bottom: 0.25rem;
     }
 
     .key-info-grid {
