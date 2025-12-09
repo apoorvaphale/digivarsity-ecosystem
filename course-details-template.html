@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.Com - Andhra University | Digivarsity</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="course-details-template.css">
+</head>
+<body>
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Digivarsity Logo" class="logo-img">
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="programs.html">Programs</a>
+                <a href="/career-tools">Career Tools</a>
+                <a href="/partners">Partners</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-nav">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="online-odl-programs.html">Online & ODL Programs</a></li>
+                <li>B.Com - Andhra University</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- 1. HEADER SECTION -->
+    <section class="course-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-top">
+                    <div class="university-info-compact">
+                        <img src="au-logo.png" alt="Andhra University" class="university-logo-rect">
+                        <div class="university-details">
+                            <h2 class="university-name">Andhra University</h2>
+                            <div class="credentials-inline">
+                                <span class="badge badge-ugc">UGC Entitled</span>
+                                <span class="badge badge-naac">NAAC A+</span>
+                                <span class="badge badge-nirf">NIRF Top 100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Course Name</span>
+                        <h1 class="course-title">Bachelor of Commerce</h1>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Type of Course</span>
+                        <p class="info-value">Online</p>
+                    </div>
+                </div>
+                
+                <div class="header-ctas">
+                    <button class="btn btn-primary btn-glow" onclick="startApplication()">
+                        <span>Start Your Application</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                    <button class="btn btn-secondary" onclick="downloadBrochure()">
+                        <span>📄</span>
+                        <span>Download Brochure</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. KEY HIGHLIGHTS BAR -->
+    <section class="highlights-bar">
+        <div class="container">
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <span class="highlight-icon">📚</span>
+                    <div class="highlight-content">
+                        <strong>Mode</strong>
+                        <span>Online</span>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">⏱️</span>
+                    <div class="highlight-content">
+                        <strong>Duration</strong>
+                        <span>3 Years</span>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">🎓</span>
+                    <div class="highlight-content">
+                        <strong>Eligibility</strong>
+                        <span>12th Pass</span>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">💻</span>
+                    <div class="highlight-content">
+                        <strong>Learning Format</strong>
+                        <span>Live + Recorded</span>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">📝</span>
+                    <div class="highlight-content">
+                        <strong>Assessments</strong>
+                        <span>Semester-wise Exams</span>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">🏛️</span>
+                    <div class="highlight-content">
+                        <strong>University Type</strong>
+                        <span>Government University</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. WHY CHOOSE THIS PROGRAM -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose the B.Com Program?</h2>
+            <p class="section-intro">This program combines academic excellence with practical learning, offering you the flexibility to study at your own pace while earning a nationally recognised degree that opens doors to diverse career opportunities.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Flexible Online Learning</h3>
+                    <p>Study anytime, anywhere with our comprehensive online platform. Balance your education with work and personal commitments.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Recognised Degree Valid Nationwide</h3>
+                    <p>UGC-entitled degree accepted for government jobs, higher education, and career advancement across India.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h3>Industry-Aligned Curriculum</h3>
+                    <p>Learn skills that matter in today's job market with curriculum designed to meet industry demands.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SKILLS YOU WILL LEARN -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">What You'll Learn</h2>
+            <div class="skills-grid" id="skillsTags">
+                <!-- Skills will be dynamically inserted based on program -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PROGRAM CURRICULUM -->
+    <section class="curriculum-section">
+        <div class="container">
+            <h2 class="section-title">Program Curriculum</h2>
+            <div class="curriculum-accordion" id="curriculumAccordion">
+                <!-- Curriculum will be dynamically inserted -->
+            </div>
+            <div class="curriculum-cta">
+                <button class="btn btn-primary" onclick="downloadBrochure()">
+                    <span>📄</span>
+                    <span>Download Brochure</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FEE STRUCTURE -->
+    <section class="fee-section">
+        <div class="container">
+            <h2 class="section-title">Fee Structure</h2>
+            <div class="fee-table-wrapper">
+                <table class="fee-table" id="feeTable">
+                    <thead>
+                        <tr>
+                            <th>Semester</th>
+                            <th>Fee (₹)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Fee rows will be dynamically inserted -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="fee-summary">
+                <div class="total-fee">
+                    <strong>Total Program Fee:</strong>
+                    <span class="fee-amount">₹40,000</span>
+                </div>
+                <p class="emi-note">Easy EMI options available. Talk to a counsellor.</p>
+                <button class="btn btn-primary" onclick="scrollToForm()">Apply Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CAREER OUTCOMES -->
+    <section class="career-section">
+        <div class="container">
+            <h2 class="section-title">Career Opportunities After B.Com</h2>
+            <div class="career-container">
+                <div class="salary-highlight">
+                    <div class="salary-icon">💰</div>
+                    <div class="salary-content">
+                        <span class="salary-label">Average Salary Range</span>
+                        <span class="salary-value" id="salaryRange">₹3-8 LPA</span>
+                    </div>
+                </div>
+                
+                <div class="job-roles-grid" id="jobRolesList">
+                    <!-- Job roles will be dynamically inserted -->
+                </div>
+                
+                <div class="sectors-section">
+                    <h3>Top Hiring Sectors</h3>
+                    <div class="sector-tags" id="sectorTags">
+                        <span class="sector-tag">BFSI</span>
+                        <span class="sector-tag">IT/ITES</span>
+                        <span class="sector-tag">Retail</span>
+                        <span class="sector-tag">Healthcare</span>
+                        <span class="sector-tag">Logistics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. WHO IS THIS PROGRAM BEST FOR -->
+    <section class="persona-section">
+        <div class="container">
+            <h2 class="section-title">Who Is This Program Best For?</h2>
+            <div class="persona-grid">
+                <div class="persona-card">
+                    <div class="persona-icon">👨‍🎓</div>
+                    <h3>Students Seeking a Recognised Degree</h3>
+                    <p>Perfect for those who want a flexible path to earning a UGC-entitled degree without compromising on quality.</p>
+                </div>
+
+                <div class="persona-card">
+                    <div class="persona-icon">📚</div>
+                    <h3>Competitive Exam Aspirants</h3>
+                    <p>Great for learners preparing for government jobs or competitive exams who need a recognised degree.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. HOW ONLINE/ODL LEARNING WORKS -->
+    <section class="learning-process">
+        <div class="container">
+            <h2 class="section-title">How Online Learning Works</h2>
+            <p class="section-intro">Experience a seamless learning journey with our comprehensive online platform designed for your success.</p>
+            <div class="process-grid">
+                <div class="process-item">
+                    <div class="process-icon">🎥</div>
+                    <h3>Live Classes</h3>
+                    <p>Attend interactive live sessions with expert faculty</p>
+                </div>
+                <div class="process-item">
+                    <div class="process-icon">📹</div>
+                    <h3>Recorded Sessions</h3>
+                    <p>Access recorded lectures anytime for revision</p>
+                </div>
+                <div class="process-item">
+                    <div class="process-icon">📖</div>
+                    <h3>Digital Study Material</h3>
+                    <p>Comprehensive e-books and resources at your fingertips</p>
+                </div>
+                <div class="process-item">
+                    <div class="process-icon">✍️</div>
+                    <h3>Online Exams</h3>
+                    <p>Convenient online assessments and semester exams</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. ADMISSION PROCESS -->
+    <section class="admission-process">
+        <div class="container">
+            <h2 class="section-title">How to Apply</h2>
+            <div class="process-steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>Fill Application Form</h3>
+                    <p>Complete the online application with your details</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>Upload Documents</h3>
+                    <p>Submit required educational certificates</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>Screening & Verification</h3>
+                    <p>Quick document verification process</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h3>Pay Semester 1 Fee</h3>
+                    <p>Secure your seat with fee payment</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <h3>Begin Your Journey</h3>
+                    <p>Receive confirmation and start learning</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. ELIGIBILITY CRITERIA -->
+    <section class="eligibility-section">
+        <div class="container">
+            <h2 class="section-title">Eligibility Criteria</h2>
+            <div class="eligibility-grid" id="eligibilityList">
+                <!-- Eligibility criteria will be dynamically inserted -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. UNIVERSITY RECOGNITION -->
+    <section class="recognition-section">
+        <div class="container">
+            <h2 class="section-title">University Recognition & Credentials</h2>
+            <div class="recognition-content">
+                <div class="recognition-left">
+                    <img src="university-logo-placeholder.png" alt="Andhra University" class="recognition-logo">
+                </div>
+                <div class="recognition-right">
+                    <div class="recognition-badges">
+                        <div class="recognition-item">
+                            <strong>NAAC Accreditation:</strong>
+                            <span>A+</span>
+                        </div>
+                        <div class="recognition-item">
+                            <strong>NIRF Ranking:</strong>
+                            <span>Top 100</span>
+                        </div>
+                        <div class="recognition-item">
+                            <strong>UGC Entitlement:</strong>
+                            <a href="#" class="pdf-link">View Certificate (PDF)</a>
+                        </div>
+                    </div>
+                    <p class="recognition-note">This degree is recognised for all government and private jobs across India.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. TESTIMONIALS -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Students Say</h2>
+            <div class="testimonials-grid" id="testimonialsGrid">
+                <!-- Testimonials will be dynamically inserted -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. FAQ SECTION -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-accordion" id="faqAccordion">
+                <!-- FAQs will be dynamically inserted -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. FINAL CTA SECTION -->
+    <section class="final-cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Career?</h2>
+                <p>Join thousands of learners who have already started their journey with us</p>
+                <button class="btn btn-primary btn-large btn-glow" onclick="startApplication()">
+                    <span>Start Your Application Now</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+                <p class="cta-note">✓ Quick 2-minute process • ✓ Instant confirmation • ✓ Counsellor support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 16. STICKY CTA BAR (Mobile) -->
+    <div class="sticky-cta-bar" id="stickyCTABar">
+        <div class="sticky-cta-content">
+            <span class="sticky-cta-text">Ready to start your journey?</span>
+            <div class="sticky-cta-buttons">
+                <button class="btn btn-primary btn-small" onclick="scrollToForm()">Apply Now</button>
+                <button class="btn btn-secondary btn-small" onclick="openChatbot()">Talk to Counsellor</button>
+                <button class="btn-icon" onclick="downloadBrochure()" title="Download Brochure">📄</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot Button -->
+    <button class="chatbot-button" id="chatbotButton" onclick="openChatbot()">
+        <span class="chatbot-icon">💬</span>
+        <span class="chatbot-label">Ask Divya</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <nav class="footer-nav">
+                <a href="/programs">Programs</a>
+                <a href="/career-tools">Career Tools</a>
+                <a href="/partners/employers">Employers</a>
+                <a href="/partners/universities">Universities</a>
+                <a href="/partners/csr">CSR</a>
+                <a href="/contact">Contact</a>
+            </nav>
+            <div class="social-icons">
+                <a href="#" class="social-icon">LinkedIn</a>
+                <a href="#" class="social-icon">Twitter</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+            <p class="footer-tagline">A TeamLease EdTech Platform</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="course-details-template.js"></script>
+</body>
+</html>

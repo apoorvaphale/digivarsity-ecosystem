@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Your Degree Journey - Online & ODL Programs | Digivarsity</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="online-odl-programs.css">
+</head>
+<body>
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Digivarsity Logo" class="logo-img">
+            </a>
+            <div class="trust-text">
+                UGC-approved Online, ODL Degrees and Diplomas from India's leading universities.
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="programs.html">Programs</a>
+                <a href="/career-tools">Career Tools</a>
+                <a href="/partners">Partners</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Start Your Journey With India's Top Online & ODL Universities</h1>
+            <p class="hero-subtitle">Explore flexible, recognised Online Degrees, ODL Programs & Diplomas designed for learners across India.</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-nav">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li>Online & ODL Programs</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="programs-main">
+        <div class="container">
+            <!-- Sidebar Filters -->
+            <aside class="filters-sidebar" id="filtersSidebar">
+                <h3>Filter Programs</h3>
+                
+                <div class="filter-group">
+                    <label>Program Type</label>
+                    <select id="filterProgramType">
+                        <option value="">All Program Types</option>
+                        <option value="ug">UG Degrees</option>
+                        <option value="pg">PG Degrees</option>
+                        <option value="diploma">Diplomas / Advanced Diplomas</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Mode</label>
+                    <select id="filterMode">
+                        <option value="">All Modes</option>
+                        <option value="online">Online</option>
+                        <option value="odl">ODL</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>University</label>
+                    <select id="filterUniversity">
+                        <option value="">All Universities</option>
+                        <option value="andhra">Andhra University</option>
+                        <option value="jain">Jain University</option>
+                        <option value="mizoram">Mizoram University</option>
+                        <option value="ddugu">Deen Dayal Upadhyay Gorakhpur University (DDUGU)</option>
+                        <option value="ccsu">Chaudhary Charan Singh University (CCSU)</option>
+                        <option value="srinivas">Srinivas University</option>
+                        <option value="jamia">Jamia Hamdard University</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Eligibility</label>
+                    <select id="filterEligibility">
+                        <option value="">All Levels</option>
+                        <option value="12th">12th Pass</option>
+                        <option value="graduate">Graduate</option>
+                        <option value="working">Working Professional</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Duration</label>
+                    <select id="filterDuration">
+                        <option value="">Any Duration</option>
+                        <option value="6months">6 Months</option>
+                        <option value="1year">1 Year</option>
+                        <option value="3years">3 Years</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Budget (Fee Per Year)</label>
+                    <select id="filterBudget">
+                        <option value="">Any Budget</option>
+                        <option value="below25k">Below ₹25,000/year</option>
+                        <option value="25k-50k">₹25,000–₹50,000/year</option>
+                        <option value="above50k">Above ₹50,000/year</option>
+                    </select>
+                </div>
+
+                <div class="filter-actions">
+                    <button class="btn-primary" id="applyFilters">Apply Filters</button>
+                    <button class="btn-secondary" id="clearFilters">Clear All</button>
+                </div>
+            </aside>
+
+            <!-- Programs Grid Area -->
+            <div class="programs-content">
+                <!-- Controls Bar -->
+                <div class="controls-bar">
+                    <div class="compare-toggle">
+                        <label>
+                            <input type="checkbox" id="compareToggle">
+                            <span>Compare Programs</span>
+                        </label>
+                    </div>
+                    <div class="sort-controls">
+                        <label>Sort by:</label>
+                        <select id="sortBy">
+                            <option value="popular">Most Popular</option>
+                            <option value="fee-low">Lowest Fee</option>
+                            <option value="fee-high">Highest Fee</option>
+                            <option value="alpha">Alphabetical (A–Z)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Programs Grid -->
+                <div class="programs-grid" id="programsGrid">
+                    <!-- Programs will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile Filter Button -->
+    <button class="mobile-filter-btn" id="mobileFilterBtn">
+        <span>Filter Programs</span>
+    </button>
+
+    <!-- Compare Bar (Hidden by default) -->
+    <div class="compare-bar" id="compareBar" style="display: none;">
+        <div class="compare-bar-content">
+            <span id="compareCount">Comparing 0/3 programs</span>
+            <button class="btn-primary" id="viewComparison">View Comparison</button>
+        </div>
+    </div>
+
+    <!-- Comparison Modal -->
+    <div class="modal" id="comparisonModal">
+        <div class="modal-content comparison-modal">
+            <button class="modal-close" id="closeComparison">&times;</button>
+            <h2>Program Comparison</h2>
+            <div class="comparison-table" id="comparisonTable">
+                <!-- Comparison content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <nav class="footer-nav">
+                <a href="/programs">Programs</a>
+                <a href="/career-tools">Career Tools</a>
+                <a href="/partners/employers">Employers</a>
+                <a href="/partners/universities">Universities</a>
+                <a href="/partners/csr">CSR</a>
+                <a href="/contact">Contact</a>
+            </nav>
+            <div class="social-icons">
+                <a href="#" class="social-icon">LinkedIn</a>
+                <a href="#" class="social-icon">Twitter</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+            <p class="footer-tagline">A TeamLease EdTech Platform</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="online-odl-programs.js"></script>
+</body>
+</html>
