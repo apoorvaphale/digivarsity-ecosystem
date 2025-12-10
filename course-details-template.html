@@ -47,41 +47,101 @@
     <!-- 1. HEADER SECTION -->
     <section class="course-header">
         <div class="container">
-            <div class="header-content">
-                <div class="header-top">
-                    <div class="university-info-compact">
-                        <img src="au-logo.png" alt="Andhra University" class="university-logo-rect">
-                        <div class="university-details">
-                            <h2 class="university-name">Andhra University</h2>
-                            <div class="credentials-inline">
-                                <span class="badge badge-ugc">UGC Entitled</span>
-                                <span class="badge badge-naac">NAAC A+</span>
-                                <span class="badge badge-nirf">NIRF Top 100</span>
+            <div class="header-content header-with-form">
+                <div class="header-left">
+                    <div class="header-top">
+                        <div class="university-info-compact">
+                            <img src="au-logo.png" alt="Andhra University" class="university-logo-rect">
+                            <div class="university-details">
+                                <h2 class="university-name">Andhra University</h2>
+                                <div class="credentials-inline">
+                                    <span class="badge badge-ugc">UGC Entitled</span>
+                                    <span class="badge badge-naac">NAAC A+</span>
+                                    <span class="badge badge-nirf">NIRF Top 100</span>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="course-info-grid">
+                        <div class="info-item">
+                          <!--  <span class="info-label">Course Name</span>
+                        -->
+                          <h1 class="course-title">Bachelor of Commerce</h1>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Type of Course</span>
+                            <p class="info-value">Online</p>
+                        </div>
+                    </div>
+                    
+                    <div class="header-ctas">
+                        <button class="btn btn-primary btn-glow" onclick="startApplication()">
+                            <span>Start Your Application</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+                        <button class="btn btn-secondary" onclick="downloadBrochure()">
+                            <span>📄</span>
+                            <span>Download Brochure</span>
+                        </button>
+                    </div>
                 </div>
                 
-                <div class="course-info-grid">
-                    <div class="info-item">
-                        <span class="info-label">Course Name</span>
-                        <h1 class="course-title">Bachelor of Commerce</h1>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Type of Course</span>
-                        <p class="info-value">Online</p>
+                <!-- Lead Capture Form -->
+                <div class="lead-form-wrapper">
+                    <div class="lead-form-container">
+                        <div class="lead-form-header">
+                            <h3>Speak With a Certified Advisor</h3>
+                            <p>Honest, accurate advice to help you make the right choice.</p>
+                        </div>
+                        <form class="lead-form" id="leadCaptureForm" onsubmit="handleLeadFormSubmit(event)">
+                            <div class="form-group">
+                                <input type="text" id="leadName" name="name" placeholder="Your Name" required>
+                                <span class="form-icon">👤</span>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="leadEmail" name="email" placeholder="Email ID" required>
+                                <span class="form-icon">✉️</span>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="leadMobile" name="mobile" placeholder="Mobile No." pattern="[0-9]{10}" required>
+                                <span class="form-icon">📱</span>
+                            </div>
+                            <div class="form-group">
+                                <select id="leadCourse" name="course" required>
+                                    <option value="" disabled selected>Select Course</option>
+                                    <option value="B.Com">B.Com</option>
+                                    <option value="B.A.">B.A.</option>
+                                    <option value="B.Sc.">B.Sc.</option>
+                                    <option value="M.Com">M.Com</option>
+                                    <option value="MBA">MBA</option>
+                                    <option value="MCA">MCA</option>
+                                </select>
+                                <span class="form-icon">🎓</span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="leadCity" name="city" placeholder="City" required>
+                                <span class="form-icon">📍</span>
+                            </div>
+                            <button type="submit" class="btn btn-submit">
+                                <span>Submit</span>
+                                <span class="btn-arrow">→</span>
+                            </button>
+                        </form>
+                        <p class="form-disclaimer">By submitting, you agree to our Terms & Privacy Policy</p>
                     </div>
                 </div>
-                
-                <div class="header-ctas">
-                    <button class="btn btn-primary btn-glow" onclick="startApplication()">
-                        <span>Start Your Application</span>
-                        <span class="btn-arrow">→</span>
-                    </button>
-                    <button class="btn btn-secondary" onclick="downloadBrochure()">
-                        <span>📄</span>
-                        <span>Download Brochure</span>
-                    </button>
+            </div>
+        </div>
+        
+        <!-- Scroll Down Indicator -->
+        <div class="scroll-indicator" onclick="scrollToNextSection()">
+            <div class="scroll-arrow">
+                <span>Scroll to explore</span>
+                <div class="arrow-down">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>

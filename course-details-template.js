@@ -395,9 +395,14 @@ function scrollToForm() {
 
 // Download Brochure
 function downloadBrochure() {
-    alert('Brochure download will be implemented. This would trigger a PDF download.');
-    // In production, this would download an actual PDF
-    // window.location.href = '/brochures/course-brochure.pdf';
+    // Create a temporary link element to open in new tab
+    const link = document.createElement('a');
+    link.href = 'au-brochure.pdf';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 }
 
 // Download Syllabus
@@ -413,10 +418,88 @@ function openChatbot() {
     // In production, this would open a chatbot widget
 }
 
-// Setup Form Submission (removed - using CTA button instead)
+// Scroll to Next Section
+function scrollToNextSection() {
+    const highlightsSection = document.querySelector('.highlights-bar');
+    if (highlightsSection) {
+        highlightsSection.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+        });
+    }
+}
+
+// Setup Form Submission
 function setupFormSubmission() {
-    // Form removed - using direct CTA button
-    console.log('Form submission setup skipped - using CTA button');
+    const form = document.getElementById('leadCaptureForm');
+    if (form) {
+        // Auto-select current course in dropdown
+        const courseSelect = document.getElementById('leadCourse');
+        if (courseSelect && courseData.courseName) {
+            const options = courseSelect.options;
+            for (let i = 0; i < options.length; i++) {
+                if (options[i].value === courseData.courseName) {
+                    options[i].selected = true;
+                    break;
+                }
+            }
+        }
+    }
+}
+
+// Handle Lead Form Submission
+function handleLeadFormSubmit(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    const formData = {
+        name: document.getElementById('leadName').value,
+        email: document.getElementById('leadEmail').value,
+        mobile: document.getElementById('leadMobile').value,
+        course: document.getElementById('leadCourse').value,
+        city: document.getElementById('leadCity').value,
+        timestamp: new Date().toISOString(),
+        source: window.location.href
+    };
+    
+    // Validate mobile number
+    if (!/^[0-9]{10}$/.test(formData.mobile)) {
+        alert('Please enter a valid 10-digit mobile number');
+        return;
+    }
+    
+    // Validate email
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+        alert('Please enter a valid email address');
+        return;
+    }
+    
+    // Show loading state
+    const submitBtn = form.querySelector('.btn-submit');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<span>Submitting...</span>';
+    submitBtn.disabled = true;
+    
+    // Simulate API call (replace with actual API endpoint)
+    setTimeout(() => {
+        console.log('Lead captured:', formData);
+        
+        // Show success state
+        const formContainer = document.querySelector('.lead-form-container');
+        formContainer.classList.add('success');
+        formContainer.innerHTML = `
+            <div class="success-icon">✅</div>
+            <h3>Thank You!</h3>
+            <p>Our counsellor will contact you shortly.</p>
+        `;
+        
+        // In production, send to actual API:
+        // fetch('/api/leads', {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: JSON.stringify(formData)
+        // });
+    }, 1000);
 }
 
 // Smooth scroll for anchor links

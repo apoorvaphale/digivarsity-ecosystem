@@ -52,7 +52,7 @@
 /* 1. COURSE HEADER */
 .course-header {
     background: linear-gradient(135deg, #0057B7 0%, #4DAE8A 100%);
-    padding: 50px 0 60px;
+    padding: 30px 0 40px;
     color: white;
     position: relative;
     overflow: hidden;
@@ -78,7 +78,7 @@
 }
 
 .header-top {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
     display: flex;
     justify-content: center;
 }
@@ -86,20 +86,20 @@
 .university-info-compact {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    padding: 20px 28px;
+    padding: 16px 24px;
     border-radius: 16px;
     max-width: fit-content;
 }
 
 .university-logo-rect {
-    width: 120px;
-    height: 100px;
+    width: 100px;
+    height: 80px;
     object-fit: contain;
     background: white;
-    padding: 8px;
+    padding: 6px;
     border-radius: 8px;
 }
 
@@ -151,8 +151,8 @@
 .course-info-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 28px 80px;
-    margin-bottom: 36px;
+    gap: 20px 80px;
+    margin-bottom: 24px;
     max-width: 700px;
 }
 
@@ -1208,7 +1208,7 @@
     }
     
     .course-header {
-        padding: 40px 0 50px;
+        padding: 24px 0 32px;
     }
     
     .header-content {
@@ -1345,8 +1345,8 @@
     }
     
     .university-logo-rect {
-        width: 60px;
-        height: 45px;
+        width: 70px;
+        height: 55px;
     }
     
     .credentials-inline {
@@ -2012,5 +2012,347 @@
         right: 16px;
         padding: 6px 12px;
         font-size: 0.7rem;
+    }
+}
+
+/* ========================================
+   LEAD CAPTURE FORM - Glowing Effect
+   ======================================== */
+
+/* Header layout with form */
+.header-with-form {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Scroll Down Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scroll-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.scroll-arrow:hover {
+    color: white;
+    transform: translateY(-3px);
+}
+
+.scroll-arrow span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.arrow-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.arrow-down span {
+    width: 2px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 1px;
+    animation: scrollBounce 2s infinite;
+}
+
+.arrow-down span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.arrow-down span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.arrow-down span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes scrollBounce {
+    0%, 20%, 50%, 80%, 100% {
+        opacity: 0.4;
+        transform: translateY(0);
+    }
+    40% {
+        opacity: 1;
+        transform: translateY(4px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(2px);
+    }
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-left .header-top {
+    justify-content: flex-start;
+}
+
+/* Lead Form Wrapper with Glow */
+.lead-form-wrapper {
+    position: relative;
+    padding: 3px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #00d4ff, #7c3aed, #f472b6, #00d4ff);
+    background-size: 300% 300%;
+    animation: glowBorder 4s ease infinite;
+    box-shadow: 
+        0 0 20px rgba(0, 212, 255, 0.4),
+        0 0 40px rgba(124, 58, 237, 0.3),
+        0 0 60px rgba(244, 114, 182, 0.2);
+}
+
+@keyframes glowBorder {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.lead-form-container {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 18px;
+    padding: 28px 24px;
+    backdrop-filter: blur(10px);
+}
+
+.lead-form-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.lead-form-header h3 {
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    margin: 0 0 6px;
+    font-weight: 700;
+}
+
+.lead-form-header p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Form Styles */
+.lead-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px 16px 14px 44px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #0057B7;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(0, 87, 183, 0.1);
+}
+
+.form-group select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+}
+
+.form-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    pointer-events: none;
+}
+
+/* Submit Button */
+.btn-submit {
+    background: linear-gradient(135deg, #0057B7 0%, #4DAE8A 100%);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    margin-top: 4px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 87, 183, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.btn-submit .btn-arrow {
+    transition: transform 0.3s ease;
+}
+
+.btn-submit:hover .btn-arrow {
+    transform: translateX(4px);
+}
+
+/* Form Disclaimer */
+.form-disclaimer {
+    text-align: center;
+    font-size: 0.7rem;
+    color: #999;
+    margin: 12px 0 0;
+}
+
+/* Success State */
+.lead-form-container.success {
+    text-align: center;
+    padding: 40px 24px;
+}
+
+.lead-form-container.success .success-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    animation: bounceIn 0.5s ease;
+}
+
+.lead-form-container.success h3 {
+    color: #4DAE8A;
+    margin-bottom: 8px;
+}
+
+.lead-form-container.success p {
+    color: #666;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Styles for Lead Form */
+@media (max-width: 1024px) {
+    .header-with-form {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .lead-form-wrapper {
+        max-width: 420px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-with-form {
+        gap: 28px;
+    }
+    
+    .lead-form-wrapper {
+        max-width: 100%;
+        box-shadow: 
+            0 0 15px rgba(0, 212, 255, 0.3),
+            0 0 30px rgba(124, 58, 237, 0.2);
+    }
+    
+    .scroll-indicator {
+        bottom: 15px;
+    }
+    
+    .scroll-arrow span {
+        font-size: 0.75rem;
+    }
+    
+    .lead-form-container {
+        padding: 24px 20px;
+    }
+    
+    .lead-form-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 12px 14px 12px 40px;
+        font-size: 0.9rem;
+    }
+    
+    .form-icon {
+        left: 12px;
+        font-size: 1rem;
+    }
+    
+    .btn-submit {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .lead-form-container {
+        padding: 20px 16px;
+    }
+    
+    .lead-form {
+        gap: 12px;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 11px 12px 11px 38px;
+        font-size: 0.85rem;
+        border-radius: 10px;
+    }
+    
+    .btn-submit {
+        padding: 11px 18px;
+        font-size: 0.9rem;
+        border-radius: 10px;
     }
 }
