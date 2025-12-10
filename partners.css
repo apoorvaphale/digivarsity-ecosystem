@@ -176,6 +176,157 @@
     opacity: 0.95;
 }
 
+/* How It Works / Workflow Section */
+.how-it-works,
+.workflow-section {
+    padding: 5rem 2rem;
+    background: var(--light);
+}
+
+.workflow-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.workflow-step {
+    background: var(--gray);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.workflow-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--blue), var(--green));
+    color: var(--light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 auto 1.5rem;
+}
+
+.workflow-step h3 {
+    font-size: 1.3rem;
+    color: var(--blue);
+    margin-bottom: 1rem;
+}
+
+.workflow-step p {
+    color: #666;
+    line-height: 1.8;
+}
+
+/* Case Studies / Success Stories */
+.case-studies {
+    padding: 5rem 2rem;
+    background: var(--gray);
+}
+
+.carousel-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.case-study-card {
+    background: var(--light);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.case-study-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.case-quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.case-author {
+    font-weight: 600;
+    color: var(--blue);
+}
+
+/* Industry Clusters */
+.industry-clusters {
+    padding: 5rem 2rem;
+    background: var(--gray);
+}
+
+.clusters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cluster-item {
+    background: var(--light);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.cluster-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, var(--blue), var(--green));
+}
+
+.cluster-item:hover h3 {
+    color: var(--light);
+}
+
+.cluster-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cluster-item h3 {
+    font-size: 1.3rem;
+    color: var(--blue);
+    transition: color 0.3s ease;
+}
+
+/* Section Container */
+.section-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-container h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .partner-hero {
@@ -260,6 +411,43 @@
     .cta-box p {
         font-size: 1rem;
     }
+    
+    .workflow-steps {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .workflow-step {
+        padding: 2rem 1.5rem;
+    }
+    
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .carousel-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .case-study-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .clusters-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .cluster-item {
+        padding: 2rem 1.5rem;
+    }
+    
+    .cluster-icon {
+        font-size: 2.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -277,5 +465,9 @@
     
     .cta-box {
         padding: 2.5rem 1.5rem;
+    }
+    
+    .clusters-grid {
+        grid-template-columns: 1fr;
     }
 }

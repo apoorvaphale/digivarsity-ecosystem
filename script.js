@@ -56,6 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
+    // Duplicate carousel items for seamless loop
+    const carousel = document.querySelector('.institutions-carousel');
+    if (carousel) {
+        const items = carousel.innerHTML;
+        carousel.innerHTML += items; // Duplicate for seamless loop
+    }
+    
     // Observe counters
     const counters = document.querySelectorAll('.counter');
     counters.forEach(counter => observer.observe(counter));
