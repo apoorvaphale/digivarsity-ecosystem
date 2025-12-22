@@ -1300,6 +1300,16 @@
             const sections = document.querySelectorAll('section');
             sections.forEach(section => observer.observe(section));
         });
+
+        function openChatbot() {
+            alert('DigiChamp chatbot will open here. This would launch the AI assistant.');
+        }
     </script>
+
+    <!-- Ask DigiChamp Chatbot Button -->
+    <button class="chatbot-button" id="chatbotButton" onclick="openChatbot()">
+        <div class="chatbot-icon"></div>
+        <span class="chatbot-label">Ask DigiChamp</span>
+    </button>
 </body>
 </html>

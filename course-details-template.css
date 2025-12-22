@@ -212,7 +212,7 @@
 
 /* 2. HIGHLIGHTS BAR */
 .highlights-bar {
-    background: white;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
     padding: 28px 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
@@ -271,7 +271,7 @@
 /* 3. WHY CHOOSE */
 .why-choose {
     padding: 60px 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, #f0f7ff 0%, #e8f4f8 50%, #f0fff4 100%);
 }
 
 .section-title {
@@ -351,7 +351,7 @@
 /* 4. SKILLS SECTION */
 .skills-section {
     padding: 60px 0;
-    background: white;
+    background: linear-gradient(180deg, #ffffff 0%, #fafbfc 100%);
 }
 
 .skills-grid {
@@ -363,34 +363,44 @@
 }
 
 .skill-tag {
-    background: linear-gradient(135deg, #0057B7, #0066cc);
-    color: white;
+    background: white;
+    color: #1a1a1a;
     padding: 16px 20px;
-    border-radius: 12px;
+    border-radius: 10px;
     font-weight: 600;
     font-size: 0.85rem;
     transition: all 0.3s ease;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 87, 183, 0.2);
-}
-
-.skill-tag:nth-child(3n+1) {
-    background: linear-gradient(135deg, #E93B47, #ff4757);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 2px solid #0057B7;
 }
 
 .skill-tag:nth-child(3n+2) {
-    background: linear-gradient(135deg, #4DAE8A, #5ec99a);
+    border-color: #4DAE8A;
+}
+
+.skill-tag:nth-child(3n) {
+    border-color: #E93B47;
 }
 
 .skill-tag:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 87, 183, 0.15);
+    background: #f8f9fa;
+}
+
+.skill-tag:nth-child(3n+2):hover {
+    box-shadow: 0 6px 16px rgba(77, 174, 138, 0.15);
+}
+
+.skill-tag:nth-child(3n):hover {
+    box-shadow: 0 6px 16px rgba(233, 59, 71, 0.15);
 }
 
 /* 5. CURRICULUM SECTION */
 .curriculum-section {
     padding: 60px 0;
-    background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+    background: linear-gradient(135deg, #eef2ff 0%, #f0f7ff 50%, #f5f3ff 100%);
 }
 
 .curriculum-accordion {
@@ -481,7 +491,7 @@
 /* 6. FEE SECTION */
 .fee-section {
     padding: 60px 0;
-    background: white;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 50%, #f0fff4 100%);
 }
 
 .fee-table-wrapper {
@@ -556,7 +566,7 @@
 /* 7. CAREER SECTION */
 .career-section {
     padding: 60px 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 50%, #f0f9ff 100%);
 }
 
 .career-container {
@@ -664,7 +674,7 @@
 /* 8. PERSONA SECTION */
 .persona-section {
     padding: 80px 0;
-    background: white;
+    background: linear-gradient(180deg, #ffffff 0%, #fef7f0 100%);
 }
 
 .persona-grid {
@@ -708,7 +718,7 @@
 /* 9. LEARNING PROCESS */
 .learning-process {
     padding: 80px 0;
-    background: #f5f5f5;
+    background: linear-gradient(135deg, #f0f7ff 0%, #eef2ff 50%, #faf5ff 100%);
 }
 
 .process-grid {
@@ -750,7 +760,7 @@
 /* 10. ADMISSION PROCESS */
 .admission-process {
     padding: 80px 0;
-    background: white;
+    background: linear-gradient(180deg, #ffffff 0%, #f0fff4 50%, #ecfdf5 100%);
 }
 
 .process-steps {
@@ -803,7 +813,7 @@
 /* 11. ELIGIBILITY SECTION */
 .eligibility-section {
     padding: 60px 0;
-    background: white;
+    background: linear-gradient(180deg, #ffffff 0%, #fef7f0 50%, #fff7ed 100%);
 }
 
 .eligibility-grid {
@@ -921,7 +931,7 @@
 /* 13. TESTIMONIALS */
 .testimonials-section {
     padding: 80px 0;
-    background: #f5f5f5;
+    background: linear-gradient(135deg, #faf5ff 0%, #f5f3ff 50%, #eef2ff 100%);
 }
 
 .testimonials-grid {
@@ -982,7 +992,7 @@
 /* 14. FAQ SECTION */
 .faq-section {
     padding: 80px 0;
-    background: white;
+    background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
 }
 
 .faq-accordion {
@@ -1362,7 +1372,7 @@
 /* 13. ABOUT UNIVERSITY SECTION */
 .about-university-section {
     padding: 80px 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, #f0fff4 0%, #ecfdf5 50%, #f0fdf4 100%);
 }
 
 .about-university-content {
@@ -1480,7 +1490,7 @@
 /* 14. OTHER COURSES SECTION */
 .other-courses-section {
     padding: 80px 0;
-    background: white;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 50%, #f0f7ff 100%);
 }
 
 .other-courses-grid {
@@ -1495,7 +1505,7 @@
     background: white;
     border: 2px solid #e0e0e0;
     border-radius: 16px;
-    padding: 28px 24px;
+    padding: 24px;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -1507,6 +1517,33 @@
     transform: translateY(-6px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
     border-color: #0057B7;
+}
+
+/* University Logo Badge - Inline at top */
+.card-logo-badge {
+    width: 50px;
+    height: 50px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e5e7eb;
+    flex-shrink: 0;
+}
+
+.card-uni-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Card Top Row - Logo and Mode Tag */
+.card-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .course-card-header {
@@ -1742,173 +1779,157 @@
 
 .similar-course-card {
     position: relative;
-    padding: 32px 28px;
-    border-radius: 20px;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 24px;
+    border-radius: 16px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
     overflow: hidden;
-    color: white;
-    min-height: 240px;
-}
-
-.similar-course-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.similar-course-card:hover::before {
-    opacity: 1;
 }
 
 .similar-course-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+    border-color: #d1d5db;
 }
 
-/* Gradient Variations */
-.gradient-card-1 {
-    background: linear-gradient(135deg, #0057B7 0%, #0066cc 50%, #4DAE8A 100%);
+/* University Logo */
+.similar-card-logo {
+    width: 60px;
+    height: 60px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border: 1px solid #e5e7eb;
 }
 
-.gradient-card-2 {
-    background: linear-gradient(135deg, #6C5CE7 0%, #a29bfe 50%, #0057B7 100%);
+.uni-logo-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.gradient-card-3 {
-    background: linear-gradient(135deg, #4DAE8A 0%, #5ec99a 50%, #00b894 100%);
-}
-
-.gradient-card-4 {
-    background: linear-gradient(135deg, #E93B47 0%, #ff4757 50%, #FF6B35 100%);
-}
-
-.gradient-card-5 {
-    background: linear-gradient(135deg, #0057B7 0%, #6C5CE7 50%, #a29bfe 100%);
-}
-
-.mode-tag-gradient {
+/* Mode Tags - Subtle */
+.mode-tag-subtle {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 700;
+    top: 16px;
+    right: 16px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    backdrop-filter: blur(10px);
-    z-index: 2;
 }
 
-.mode-online-gradient {
-    background: rgba(255, 255, 255, 0.3);
-    border: 2px solid rgba(255, 255, 255, 0.6);
-    color: white;
+.mode-online-subtle {
+    background: #eff6ff;
+    color: #0057B7;
+    border: 1px solid #bfdbfe;
 }
 
-.mode-odl-gradient {
-    background: rgba(255, 255, 255, 0.25);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    color: white;
+.mode-odl-subtle {
+    background: #ecfdf5;
+    color: #059669;
+    border: 1px solid #a7f3d0;
 }
 
 .similar-card-content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    position: relative;
-    z-index: 1;
+    gap: 8px;
 }
 
 .similar-card-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     margin: 0;
     font-weight: 700;
-    color: white;
+    color: #1a1a1a;
     line-height: 1.3;
 }
 
-.university-name-gradient {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.95);
+.university-name-subtle {
+    font-size: 0.9rem;
+    color: #6b7280;
     margin: 0;
     font-weight: 500;
-    line-height: 1.4;
 }
 
-.fee-line-gradient {
+.fee-line-subtle {
     display: flex;
     align-items: center;
     gap: 8px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 10px 16px;
-    border-radius: 12px;
+    background: #f8f9fa;
+    padding: 10px 14px;
+    border-radius: 8px;
     margin-top: auto;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid #e5e7eb;
 }
 
-.fee-icon {
-    font-size: 1.2rem;
+.fee-line-subtle span {
+    font-size: 0.9rem;
+    color: #4b5563;
 }
 
-.fee-line-gradient span:last-child {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: white;
-}
-
-.btn-gradient {
-    background: rgba(255, 255, 255, 0.95);
+.fee-line-subtle strong {
     color: #0057B7;
-    padding: 14px 28px;
-    border-radius: 50px;
     font-weight: 700;
-    font-size: 0.95rem;
+}
+
+/* Subtle Buttons */
+.btn-subtle {
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
     text-align: center;
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-block;
-    position: relative;
-    z-index: 1;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.btn-gradient:hover {
-    background: white;
-    transform: translateX(4px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-}
-
-.gradient-card-1 .btn-gradient {
+.btn-blue {
+    background: #eff6ff;
     color: #0057B7;
+    border: 1px solid #bfdbfe;
 }
 
-.gradient-card-2 .btn-gradient {
+.btn-blue:hover {
+    background: #0057B7;
+    color: white;
+    border-color: #0057B7;
+}
+
+.btn-green {
+    background: #ecfdf5;
+    color: #059669;
+    border: 1px solid #a7f3d0;
+}
+
+.btn-green:hover {
+    background: #059669;
+    color: white;
+    border-color: #059669;
+}
+
+.btn-purple {
+    background: #f5f3ff;
     color: #6C5CE7;
+    border: 1px solid #ddd6fe;
 }
 
-.gradient-card-3 .btn-gradient {
-    color: #4DAE8A;
-}
-
-.gradient-card-4 .btn-gradient {
-    color: #E93B47;
-}
-
-.gradient-card-5 .btn-gradient {
-    color: #6C5CE7;
+.btn-purple:hover {
+    background: #6C5CE7;
+    color: white;
+    border-color: #6C5CE7;
 }
 
 /* Animation on scroll */
